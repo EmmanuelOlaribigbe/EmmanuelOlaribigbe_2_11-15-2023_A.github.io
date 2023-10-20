@@ -1,0 +1,220 @@
+
+@media all and (max-width: 768px) {
+  .p {
+    font-family: "Roboto";
+  }
+  .h1 {
+    font-family: "Roboto";
+  }
+  .h2 {
+    font-family: "Roboto";
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .logo {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .omf-logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px 0;
+  }
+  .location {
+    display: flex;
+    justify-content: center;
+    background-color: #f0eded;
+    width: 100%;
+  }
+  .pin {
+    position: relative;
+    top: 15px;
+    right: 35px;
+  }
+  .welcome-text {
+    background-color: #f5f5f5;
+  }
+  .welcome-text__h1 {
+    display: flex;
+    justify-content: center;
+  }
+  .welcome-text__p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    padding: 0 50px 0 50px;
+  }
+  .hiw {
+    padding: 0 10px 0 10px;
+    margin: 0 0 50px 0;
+  }
+  footer {
+    background-color: #1b1b1b;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px 20px 10px;
+  }
+  .row {
+    display: block;
+    padding: 1% 2%;
+  }
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+  .footer-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-col h4 {
+    font-family: "Shrikhand";
+    font-size: 15px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+  }
+}
+.purple-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-hover {
+  width: 200px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.btn20 {
+  background-image: linear-gradient(to right, #FF79DA, #FF79DA, #FF79DA, rgba(116, 79, 168, 0.75));
+  box-shadow: 0 4px 15px 0 rgba(87, 74, 105, 0.75);
+}
+
+.numbered-buttons {
+  list-style: none;
+  padding: 0 0 0 10px;
+}
+
+/* Style for numbered buttons */
+.numbered-buttons li {
+  margin-top: 10px;
+  position: relative;
+}
+
+.numbered-buttons li::before {
+  content: attr(data-number);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #9356DC; /* Circle background color */
+  color: #fff; /* Text color for the number */
+  border-radius: 50%; /* Make it a circle */
+  text-align: center;
+  line-height: 20px; /* Vertically center the number */
+  position: absolute;
+  left: -9px;
+  top: 20px;
+  margin-right: 10px; /* Adjust spacing between the circle and the text */
+}
+
+.bn17 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: black;
+  display: flex; /* Use flexbox to center vertically */
+  flex-direction: column; /* Place each word on a separate line */
+  align-items: flex-start; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  padding: 10px 40px 10px 80px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 10px 0 0;
+  text-align: left;
+}
+
+.bn17 i {
+  position: absolute;
+  left: 45px;
+  top: 24px;
+}
+
+.bn17:hover {
+  background-color: #FF79DA;
+  box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);
+}
+
+.res-cards {
+  padding: 20px 10px 20px 10px;
+  background-color: #f5f5f5;
+}
+
+.card {
+  min-width: 250px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  max-height: 280px;
+  background-color: rgb(248, 246, 246);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+.card-content {
+  padding: 10px 0 5px 7px;
+}
+
+.card-title {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.card-description {
+  font-size: 14px;
+  margin: 10px 0;
+}/*# sourceMappingURL=styles.css.map */
