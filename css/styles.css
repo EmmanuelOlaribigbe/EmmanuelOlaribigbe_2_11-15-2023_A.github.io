@@ -1,12 +1,8 @@
 @media all and (max-width: 768px){
-
-    .p{
-        font-family: Roboto;
+    body{
+        
     }
 
-    .h1{
-
-    }
 
     .header{
         display: flex;

@@ -1,16 +1,8 @@
 @media all and (max-width: 768px){
-
-    .p{
-        font-family: $font-family;
-    }
-    
-    .h1{
-        font-family: 'Roboto';
+    body{
+        font-family: "Roboto";
     }
 
-    .h2{
-        font-family: 'Roboto';
-    }
 
     .header{
         display: flex;
@@ -45,15 +37,15 @@
     right: 35px;
    }
    
-   .welcome-text{
+   .welcome__text{
     background-color: #f5f5f5;
    }
 
-   .welcome-text__h1{
+   .welcome__text-h1{
    @include flex-centred;
    }
 
-   .welcome-text__p{
+   .welcome__text-p{
    @include flex-centred;
    text-align: center;
     font-size: 15px;
@@ -78,21 +70,23 @@
    padding: 1% 2%;
 }
 
-.footer-col ul{
+.footer__col ul{
    list-style: none;
+   color: white;
+   
    
 }
 
-.footer-col ul li{
+.footer__col ul li{
    margin-bottom: 10px;
 }
 
-.footer-col{
+.footer__col{
  width: 25%;
  padding: 0 15px;
 }
 
-.footer-col h4{
+.footer__col h4{
    font-family:'Shrikhand';
    font-size: 15px;
    color: white;

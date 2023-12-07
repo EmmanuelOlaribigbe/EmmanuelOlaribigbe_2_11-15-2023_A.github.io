@@ -1,20 +1,20 @@
-.purple-btn {
+.explore {
     @include flex-centred;
-    
+    &__btn {
+      width: 200px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align:center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+    }
   }
-  .btn-hover {
-    width: 200px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 20px;
-    height: 55px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 50px;
-  }
+ 
 
   .bn632-hover:hover {
     background-position: 100% 0;
@@ -25,11 +25,11 @@
   }
   
   
-  .btn-hover:focus {
+  .explore__btn:focus {
     outline: none;
   }
   
-  .btn-hover.btn20 {
+  .explore__btn.btn20 {
     background-image: linear-gradient(
       to right,
       $secondary-color,
@@ -42,18 +42,18 @@
   }
 
 
-.numbered-buttons {
+.numbered__buttons {
   list-style: none;
   padding: 0 0 0 10px;
 }
 
 /* Style for numbered buttons */
-.numbered-buttons li {
+.numbered__buttons li {
   margin-top: 10px;
   position: relative;
 }
 
-.numbered-buttons li::before {
+.numbered__buttons li::before {
   content: attr(data-number);
   display: inline-block;
   width: 20px;
@@ -70,7 +70,6 @@
 }
 
 .bn17 {
-  font-family: $font-family;
   font-weight: bold;
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -95,8 +94,36 @@
 }
 
 .bn17:hover{
-   background-color: $secondary-color;
+   background-color: $primary-color;
    box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);;
 }
 
+.heart-checkbox {
+  display: none;
+}
+
+.heart-icon {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  cursor: pointer;
+  font-size: 30px; /* Adjust size as needed */
+  color: red;
+  transition: all 0.3s ease;
+}
+
+.heart-icon::before {
+  content: "♡"; /* Heart shape */
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: red;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: clip-path 0.6s ease;
+}
+
+.heart-checkbox:checked + .heart-icon::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
 
