@@ -1,3 +1,4 @@
+@media all and (max-width: 768px){
 .explore {
     @include flex-centred;
     &__btn {
@@ -16,7 +17,7 @@
   }
  
 
-  .bn632-hover:hover {
+  .explore__btn:hover {
     background-position: 100% 0;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -30,14 +31,7 @@
   }
   
   .explore__btn.btn20 {
-    background-image: linear-gradient(
-      to right,
-      $secondary-color,
-      $secondary-color,
-      $secondary-color,
-      rgba(116, 79, 168, 0.75),
-    
-    );
+    background-image: linear-gradient(to left, #9356DC, #9356DC, #FF79DA );
     box-shadow: 0 4px 15px 0 rgba(87, 74, 105, 0.75);
   }
 
@@ -85,45 +79,91 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0 10px 0 0;
   text-align: left;
+  &.bn17:hover{
+    background-color: #f0e9f8;
+    box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);
+    &.bn17 i:hover{
+      color: #9356DC;
+    }
+  }
 }
 
 .bn17 i {
   position: absolute;
   left: 45px;
   top: 24px;
+  color: grey;
 }
 
-.bn17:hover{
-   background-color: $primary-color;
-   box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);;
-}
 
-.heart-checkbox {
+#toggle-heart1 {
   display: none;
+  position: relative;
 }
 
-.heart-icon {
-  position: absolute;
-  bottom: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+#toggle-heart2 {
+  display: none;
+  position: relative;
+}
+
+#toggle-heart3 {
+  display: none;
+  position: relative;
+}
+
+#toggle-heart4 {
+  display: none;
+  position: relative;
+}
+
+label svg {
+  fill: transparent; /* Set initial fill to transparent or your desired initial color */
+  stroke:  rgb(0, 0, 0); /* This sets the outline color */
+  stroke-width: 10px;
   cursor: pointer;
-  font-size: 30px; /* Adjust size as needed */
-  color: red;
-  transition: all 0.3s ease;
-}
-
-.heart-icon::before {
-  content: "♡"; /* Heart shape */
   position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: red;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: clip-path 0.6s ease;
+  bottom: 25px; /* Adjust as needed */
+  right: -120px; /* Adjust as needed */
+  transition: fill 0.20s ease-out;
+  }
+
+
+  /* Define a linear gradient */
+.linear-gradient-heart {
+  background: linear-gradient(to bottom,  #9356DC, #FF79DA ); /* Example gradient colors */
 }
 
-.heart-checkbox:checked + .heart-icon::before {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+/* Apply gradient fill when heart is clicked */
+#toggle-heart1:checked + label svg path {
+  fill: url(#linear-gradient-heart);
 }
+
+#toggle-heart2:checked + label svg path {
+  fill: url(#linear-gradient-heart);
+}
+
+#toggle-heart3:checked + label svg path {
+  fill: url(#linear-gradient-heart);
+}
+
+#toggle-heart4:checked + label svg path {
+  fill: url(#linear-gradient-heart);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

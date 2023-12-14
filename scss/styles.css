@@ -1,8 +1,9 @@
-@charset "UTF-8";
 
 @media all and (max-width: 768px) {
   body {
     font-family: "Roboto";
+    font-weight: 300;
+    padding: 10px;
   }
   .header {
     display: flex;
@@ -29,6 +30,9 @@
     background-color: #f0eded;
     width: 100%;
   }
+  .location.p {
+    font-weight: 100;
+  }
   .pin {
     position: relative;
     top: 15px;
@@ -36,17 +40,20 @@
   }
   .welcome__text {
     background-color: #f5f5f5;
+    padding-bottom: 40px;
   }
   .welcome__text-h1 {
     display: flex;
     justify-content: center;
+    font-size: 15px;
   }
   .welcome__text-p {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     padding: 0 50px 0 50px;
+    font-weight: 100;
   }
   .hiw {
     padding: 0 10px 0 10px;
@@ -54,7 +61,6 @@
   }
   footer {
     background-color: #1b1b1b;
-    width: 100%;
     height: 100%;
     padding: 20px 10px 20px 10px;
   }
@@ -65,9 +71,17 @@
   .footer__col ul {
     list-style: none;
     color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
   }
   .footer__col ul li {
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 10px;
+    font-size: 9px;
+    width: 100px;
+    font-weight: bold;
   }
   .footer__col {
     width: 25%;
@@ -81,190 +95,193 @@
     margin-bottom: 25px;
   }
 }
-.explore {
-  display: flex;
-  justify-content: center;
+@media all and (max-width: 768px) {
+  .explore {
+    display: flex;
+    justify-content: center;
+  }
+  .explore__btn {
+    width: 200px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+  }
+  .explore__btn:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  .explore__btn:focus {
+    outline: none;
+  }
+  .explore__btn.btn20 {
+    background-image: linear-gradient(to left, #9356DC, #9356DC, #FF79DA);
+    box-shadow: 0 4px 15px 0 rgba(87, 74, 105, 0.75);
+  }
+  .numbered__buttons {
+    list-style: none;
+    padding: 0 0 0 10px;
+  }
+  /* Style for numbered buttons */
+  .numbered__buttons li {
+    margin-top: 10px;
+    position: relative;
+  }
+  .numbered__buttons li::before {
+    content: attr(data-number);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #9356DC; /* Circle background color */
+    color: #fff; /* Text color for the number */
+    border-radius: 50%; /* Make it a circle */
+    text-align: center;
+    line-height: 20px; /* Vertically center the number */
+    position: absolute;
+    left: -9px;
+    top: 20px;
+    margin-right: 10px; /* Adjust spacing between the circle and the text */
+  }
+  .bn17 {
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: black;
+    display: flex; /* Use flexbox to center vertically */
+    flex-direction: column; /* Place each word on a separate line */
+    align-items: flex-start; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    padding: 10px 40px 10px 80px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px 0 0;
+    text-align: left;
+  }
+  .bn17.bn17:hover {
+    background-color: #f0e9f8;
+    box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);
+  }
+  .bn17.bn17:hover.bn17 i:hover {
+    color: #9356DC;
+  }
+  .bn17 i {
+    position: absolute;
+    left: 45px;
+    top: 24px;
+    color: grey;
+  }
+  #toggle-heart1 {
+    display: none;
+    position: relative;
+  }
+  #toggle-heart2 {
+    display: none;
+    position: relative;
+  }
+  #toggle-heart3 {
+    display: none;
+    position: relative;
+  }
+  #toggle-heart4 {
+    display: none;
+    position: relative;
+  }
+  label svg {
+    fill: transparent; /* Set initial fill to transparent or your desired initial color */
+    stroke: rgb(0, 0, 0); /* This sets the outline color */
+    stroke-width: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px; /* Adjust as needed */
+    right: -120px; /* Adjust as needed */
+    transition: fill 0.2s ease-out;
+  }
+  /* Define a linear gradient */
+  .linear-gradient-heart {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA); /* Example gradient colors */
+  }
+  /* Apply gradient fill when heart is clicked */
+  #toggle-heart1:checked + label svg path {
+    fill: url(#linear-gradient-heart);
+  }
+  #toggle-heart2:checked + label svg path {
+    fill: url(#linear-gradient-heart);
+  }
+  #toggle-heart3:checked + label svg path {
+    fill: url(#linear-gradient-heart);
+  }
+  #toggle-heart4:checked + label svg path {
+    fill: url(#linear-gradient-heart);
+  }
 }
-.explore__btn {
-  width: 200px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  margin: 20px;
-  height: 55px;
-  text-align: center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
+@media all and (max-width: 768px) {
+  .res__cards {
+    padding: 20px 10px 20px 10px;
+    background-color: #f5f5f5;
+  }
+  .card {
+    min-width: 250px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    max-height: 280px;
+    background-color: rgb(248, 246, 246);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .card-img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+  .card__content {
+    padding: 10px 0 5px 15px;
+  }
+  .card__title {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  .card__description {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .card__description p {
+    font-weight: 10px;
+  }
+  .card-link,
+  .card a {
+    text-decoration: none;
+    color: inherit; /* Optional: This ensures that the link color matches the rest of the text */
+  }
+  .new-label {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: #99E2D0; /* Example: a gold color for visibility */
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
 }
-
-.bn632-hover:hover {
-  background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.explore__btn:focus {
-  outline: none;
-}
-
-.explore__btn.btn20 {
-  background-image: linear-gradient(to right, #FF79DA, #FF79DA, #FF79DA, rgba(116, 79, 168, 0.75));
-  box-shadow: 0 4px 15px 0 rgba(87, 74, 105, 0.75);
-}
-
-.numbered__buttons {
-  list-style: none;
-  padding: 0 0 0 10px;
-}
-
-/* Style for numbered buttons */
-.numbered__buttons li {
-  margin-top: 10px;
-  position: relative;
-}
-
-.numbered__buttons li::before {
-  content: attr(data-number);
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #9356DC; /* Circle background color */
-  color: #fff; /* Text color for the number */
-  border-radius: 50%; /* Make it a circle */
-  text-align: center;
-  line-height: 20px; /* Vertically center the number */
-  position: absolute;
-  left: -9px;
-  top: 20px;
-  margin-right: 10px; /* Adjust spacing between the circle and the text */
-}
-
-.bn17 {
-  font-weight: bold;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  color: black;
-  display: flex; /* Use flexbox to center vertically */
-  flex-direction: column; /* Place each word on a separate line */
-  align-items: flex-start; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  padding: 10px 40px 10px 80px;
-  height: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 10px 0 0;
-  text-align: left;
-}
-
-.bn17 i {
-  position: absolute;
-  left: 45px;
-  top: 24px;
-}
-
-.bn17:hover {
-  background-color: #9356DC;
-  box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);
-}
-
-.heart-checkbox {
-  display: none;
-}
-
-.heart-icon {
-  position: absolute;
-  bottom: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  cursor: pointer;
-  font-size: 30px; /* Adjust size as needed */
-  color: red;
-  transition: all 0.3s ease;
-}
-
-.heart-icon::before {
-  content: "♡"; /* Heart shape */
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: red;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: -webkit-clip-path 0.6s ease;
-  transition: clip-path 0.6s ease;
-  transition: clip-path 0.6s ease, -webkit-clip-path 0.6s ease;
-}
-
-.heart-checkbox:checked + .heart-icon::before {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.res__cards {
-  padding: 20px 10px 20px 10px;
-  background-color: #f5f5f5;
-}
-
-.card {
-  min-width: 250px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 200px;
-  max-height: 280px;
-  background-color: rgb(248, 246, 246);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.card-img {
-  box-sizing: border-box;
-  width: 100%;
-  height: 200px;
-  border-radius: 20px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
-}
-
-.card__content {
-  padding: 10px 0 5px 15px;
-}
-
-.card__title {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-}
-
-.card__description {
-  font-size: 14px;
-  margin: 10px 0;
-}
-
-.card-link,
-.card a {
-  text-decoration: none;
-  color: inherit; /* Optional: This ensures that the link color matches the rest of the text */
-}
-
-.new-label {
-  position: absolute;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  background-color: #99E2D0; /* Example: a gold color for visibility */
-  color: white;
-  padding: 5px 20px 5px 20px;
-  border-radius: 5px;
-  font-size: 0.8em;
-  text-transform: uppercase;
-}
-
 .spinner-wrapper {
   position: fixed;
   top: 0;

@@ -1,6 +1,8 @@
 @media all and (max-width: 768px){
     body{
         font-family: "Roboto";
+        font-weight:300;
+        padding: 10px;
     }
 
 
@@ -29,6 +31,9 @@
     @include flex-centred;
     background-color: #f0eded;
     width: 100%;
+    &.p{
+        font-weight: 100;
+    }
    }
 
    .pin{
@@ -39,17 +44,20 @@
    
    .welcome__text{
     background-color: #f5f5f5;
+    padding-bottom: 40px;
    }
 
    .welcome__text-h1{
    @include flex-centred;
+   font-size: 15px
    }
 
    .welcome__text-p{
    @include flex-centred;
    text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     padding: 0 50px 0 50px;
+    font-weight: 100;
    }
 
   
@@ -60,41 +68,45 @@
 
    footer {
     background-color: #1b1b1b;
-    width: 100%;
     height: 100%;
     padding: 20px 10px 20px 10px;
-}
+ }
 
-.row{
+ .row{
    display: block;
    padding: 1% 2%;
-}
+ }
 
-.footer__col ul{
+ .footer__col ul{
    list-style: none;
    color: white;
-   
-   
-}
+   display: flex;
+   flex-direction: column;
+   padding: 0;
 
-.footer__col ul li{
+ }
+
+ .footer__col ul li{
+   display: flex;
+   align-items: flex-start;
    margin-bottom: 10px;
-}
+   font-size: 9px;
+   width: 100px;
+   font-weight: bold;
+ }
 
-.footer__col{
+ .footer__col{
  width: 25%;
  padding: 0 15px;
-}
+ }
 
-.footer__col h4{
+ .footer__col h4{
    font-family:'Shrikhand';
    font-size: 15px;
    color: white;
    text-transform: capitalize;
    margin-bottom: 25px;
-}
-
-
+ }
 
 }
     

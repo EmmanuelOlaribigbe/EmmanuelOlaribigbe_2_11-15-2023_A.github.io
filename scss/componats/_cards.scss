@@ -1,3 +1,4 @@
+@media all and (max-width: 768px){
 .res__cards {
     padding: 20px 10px 20px 10px;
     background-color: #f5f5f5;
@@ -43,6 +44,10 @@
     margin: 10px 0;
 }
 
+.card__description p {
+    font-weight: 10px;
+}
+
 .card-link, /* If you have a specific class for the links */
 .card a /* If you're targeting anchor tags within the card */ {
     text-decoration: none;
@@ -60,4 +65,6 @@
     font-size: 0.8em;
     text-transform: uppercase;
     
+}
+
 }
