@@ -32,3 +32,83 @@
     100% { opacity: 0; visibility: hidden; }
   }
   
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .menu .entrees_list .menu__list--btn li {
+    opacity: 0; /* Initially hide the items */
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  .menu .entrees_list .menu__list--btn li:nth-child(1) {
+    animation-delay: 0.5s; /* Delay for the first item */
+  }
+  
+  .menu .entrees_list .menu__list--btn li:nth-child(2) {
+    animation-delay: 0.6s; /* Delay for the second item */
+  }
+  
+  .menu .entrees_list .menu__list--btn li:nth-child(3) {
+    animation-delay: 0.7s; /* Delay for the third item */
+  }
+
+ /* Base styles for list items */
+.menu .entrees_list .menu__list--btn li {
+  position: relative;
+  overflow: hidden; /* Ensures that the animation stays within the list item */
+}
+
+/* Green square styles */
+.green-square {
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 0; /* Initially no width */
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  background-color: $tertiary-color;
+  transition: width 0.5s ease-in-out; /* Smooth transition for width */
+  display: flex;
+  justify-content: center; /* Center child elements */
+  align-items: center;
+}
+
+/* White circle and checkmark styles */
+.checkmark {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  background-color: white;
+  border-radius: 50%; /* Makes it circular */
+  transform: rotate(0deg) scale(1); /* Start scaled down */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for rotation and scaling */
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  
+}
+
+.checkmark i {
+  /* Styles for the icon */
+  font-size: 20px; /* Adjust the size of the icon as needed */
+  color: $tertiary-color;
+}
+
+/* Animation on hover */
+.menu .entrees_list .menu__list--btn li:hover .green-square {
+  width: 20%; /* Expand to 20% of the list item width */
+}
+
+.menu .entrees_list .menu__list--btn li:hover .checkmark {
+  transform: rotate(360deg) scale(1); /* Rotate and scale up the checkmark */
+}

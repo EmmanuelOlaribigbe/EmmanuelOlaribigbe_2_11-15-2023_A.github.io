@@ -2,7 +2,7 @@
 @media all and (max-width: 768px) {
   body {
     font-family: "Roboto";
-    font-weight: 300;
+    font-weight: 500;
     padding: 10px;
   }
   .header {
@@ -18,11 +18,71 @@
     flex-wrap: wrap;
     align-items: center;
   }
+  .logo__alt {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .logo__alt i {
+    margin: 10px 60px 0 20px;
+    color: black;
+  }
   .omf-logo {
     width: 50%;
     display: flex;
     justify-content: center;
     margin: 20px 0 10px 0;
+  }
+  .menu {
+    margin-bottom: -80px;
+  }
+  .menu__text {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+  }
+  .menu__text p {
+    margin: 0;
+  }
+  .menu__p {
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    padding-right: 60px;
+  }
+  .menu__pic img {
+    width: 100%;
+    height: 200px;
+  }
+  .menu__list {
+    position: relative;
+    top: -70px;
+    background-color: rgb(240, 236, 236);
+    border-radius: 30px 30px 0px 0px;
+    width: 100%;
+    height: 800px;
+  }
+  .menu h1 {
+    font-family: Shrikhand;
+    font-size: 19px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .entrees_list h5 {
+    position: relative;
+    padding: 0 0 0 20px;
+  }
+  .entrees_list h5::after {
+    display: block;
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #99E2D0;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
   }
   .location {
     display: flex;
@@ -53,7 +113,7 @@
     text-align: center;
     font-size: 16px;
     padding: 0 50px 0 50px;
-    font-weight: 100;
+    font-weight: 300;
   }
   .hiw {
     padding: 0 10px 0 10px;
@@ -82,6 +142,10 @@
     font-size: 9px;
     width: 100px;
     font-weight: bold;
+  }
+  .footer__col ul li i {
+    font-size: 8px;
+    margin-right: 5px;
   }
   .footer__col {
     width: 25%;
@@ -176,8 +240,9 @@
   .bn17 i {
     position: absolute;
     left: 45px;
-    top: 24px;
+    top: 20px;
     color: grey;
+    font-size: 15px;
   }
   #toggle-heart1 {
     display: none;
@@ -202,8 +267,8 @@
     cursor: pointer;
     position: absolute;
     bottom: 25px; /* Adjust as needed */
-    right: -120px; /* Adjust as needed */
-    transition: fill 0.2s ease-out;
+    right: -80px; /* Adjust as needed */
+    transition: fill 10s ease-in;
   }
   /* Define a linear gradient */
   .linear-gradient-heart {
@@ -221,6 +286,50 @@
   }
   #toggle-heart4:checked + label svg path {
     fill: url(#linear-gradient-heart);
+  }
+  #toggle-heart5 {
+    display: none;
+    position: relative;
+  }
+  .inner-heart {
+    fill: transparent; /* Set initial fill to transparent or your desired initial color */
+    stroke: rgb(0, 0, 0); /* This sets the outline color */
+    stroke-width: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 26px; /* Adjust as needed */
+    right: -60px; /* Adjust as needed */
+    transition: fill 10s ease-out;
+  }
+  #toggle-heart5:checked + label svg path {
+    fill: url(#linear-gradient-heart);
+  }
+  .menu__list--btn {
+    list-style: none;
+    padding: 0 0 0 10px;
+    margin: 0 10px 0 0;
+  }
+  /* Style for numbered buttons */
+  .menu__list--btn li {
+    margin-top: 10px;
+    position: relative;
+  }
+  .menu__btn {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: black;
+    display: flex; /* Use flexbox to center vertically */
+    flex-direction: column; /* Place each word on a separate line */
+    align-items: flex-start; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    padding: 20px 0px 5px 10px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background-color: white;
   }
 }
 @media all and (max-width: 768px) {
@@ -275,7 +384,7 @@
     top: 10px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
     background-color: #99E2D0; /* Example: a gold color for visibility */
-    color: white;
+    color: #279277;
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
     font-size: 0.8em;
@@ -322,4 +431,82 @@
     opacity: 0;
     visibility: hidden;
   }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu .entrees_list .menu__list--btn li {
+  opacity: 0; /* Initially hide the items */
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.menu .entrees_list .menu__list--btn li:nth-child(1) {
+  animation-delay: 0.5s; /* Delay for the first item */
+}
+
+.menu .entrees_list .menu__list--btn li:nth-child(2) {
+  animation-delay: 0.6s; /* Delay for the second item */
+}
+
+.menu .entrees_list .menu__list--btn li:nth-child(3) {
+  animation-delay: 0.7s; /* Delay for the third item */
+}
+
+/* Base styles for list items */
+.menu .entrees_list .menu__list--btn li {
+  position: relative;
+  overflow: hidden; /* Ensures that the animation stays within the list item */
+}
+
+/* Green square styles */
+.green-square {
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 0; /* Initially no width */
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  transition: width 0.5s ease-in-out; /* Smooth transition for width */
+  display: flex;
+  justify-content: center; /* Center child elements */
+  align-items: center;
+}
+
+/* White circle and checkmark styles */
+.checkmark {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  background-color: white;
+  border-radius: 50%; /* Makes it circular */
+  transform: rotate(0deg) scale(1); /* Start scaled down */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for rotation and scaling */
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+.checkmark i {
+  /* Styles for the icon */
+  font-size: 20px; /* Adjust the size of the icon as needed */
+  color: #99E2D0;
+}
+
+/* Animation on hover */
+.menu .entrees_list .menu__list--btn li:hover .green-square {
+  width: 20%; /* Expand to 20% of the list item width */
+}
+
+.menu .entrees_list .menu__list--btn li:hover .checkmark {
+  transform: rotate(360deg) scale(1); /* Rotate and scale up the checkmark */
 }/*# sourceMappingURL=styles.css.map */

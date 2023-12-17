@@ -24,100 +24,62 @@
             </linearGradient>
         </defs>
     </svg>
-    
-    <div class="spinner-wrapper">
-        <div class="spinner"></div>
-      </div>
     <main>
         <header>
-            <div class="logo">
+            <div class="logo__alt">
+                <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
                 <img src="images/logo/ohmyfood.png" alt="ohmyfood-logo" class="omf-logo"> 
             </div>
-            <div class="location">
-                <span class="pin">
-                    <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
-                </span>
-                <p>Paris, Belleville</p>
-            </div>
         </header>
-        <article class="welcome__text">
-            <div class="welcome__text-h1">
-                <h1><strong>Book the menu you like</strong></h1>
-            </div>
-            <div class="welcome__text-p">
-                <p>Discover top-of-the-art restaurants we picked for you</p>
-            </div>
-            <div class="explore">
-                <a href="/"><button class="explore__btn btn20">Explore our restaurants</button></a>
-            </div>
-        </article>
-
-        <section class="hiw">
-            <h1>How it works</h1>
-            <ul class="numbered__buttons">
-                <li data-number="1"><a href="#" class="bn17"><i class="fa-solid fa-mobile-screen-button"></i>Choose a restaurant</a></li>
-                <li data-number="2"><a href="#" class="bn17"><i class="fa-solid fa-list-ul"></i>Create your menu</a></li>
-                <li data-number="3"><a href="#" class="bn17"><i class="fa-solid fa-store"></i>Go enjoy it at the restaurant</a></li>
-            </ul>
-        </section>
-
-        </section>
-        <section class="res__cards">
-          <h1>Restaurants</h1>
-          <a href="your-link-here.html" class="card-link">
-            <div class="card">
-                <div class="new-label">New</div>
-              <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="New York" class="card-img"> 
-                <div class="card__content">
-                    <h2 class="card__title"><Strong>The Full Palette</Strong></h2>
-                    <p class="card__description">New York</p>
+        <section class="menu">
+            <div class="menu__pic"><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="The-Full-palette"></div>
+                <div class="menu__list">
+                    <h1>The Full Palette</h1>
+                    <input id="toggle-heart5" type="checkbox"/>
+                    <label for="toggle-heart5">
+                        <svg class="inner-heart" xmlns="http://www.w3.org/2000/svg" height="19" width="200" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+                    </label>
+                    <div class="entrees_list">
+                        <h5>ENTREES</h5>
+                        <ul class="menu__list--btn">
+                            <li data-number="1">
+                                <a href="#" class="menu__btn">Escargot<br>
+                                    <div class="menu__text">
+                                        <p class="menu_p">with southern French spices</p>
+                                    </div>
+                                    <div class="green-square">
+                                        <div class="checkmark">
+                                            <i class="fa-solid fa-check"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-number="2"><a href="#" class="menu__btn">Escargot<br>
+                                <p class="menu_p">with southern French spices</p>
+                                <div class="green-square">
+                                    <div class="checkmark">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            </li>
+                            <li data-number="3">
+                                <a href="#" class="menu__btn">Escargot<br>
+                                    <div class="menu__text">
+                                    <p class="menu__p">with southern French spices</p>
+                                    <p><strong>53</strong></p>
+                                    </div>
+                                    <div class="green-square">
+                                        <div class="checkmark">
+                                            <i class="fa-solid fa-check"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <input id="toggle-heart1" type="checkbox"/>
-                <label for="toggle-heart1">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="300" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-                </label>
-            </div> 
-          </a>  
-          <a href="your-link-here.html" class="card-link">
-            <div class="card">
-                <div class="new-label">New</div>
-                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="New York" class="card-img">
-                  <div class="card__content">
-                      <h2 class="card__title"><Strong>The Enchanted Plate</Strong></h2>
-                      <p class="card__description">New York</p>
-                  </div>
-                  <input id="toggle-heart2" type="checkbox"/>
-                <label for="toggle-heart2">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="300" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-                </label>
-              </div>  
-          </a>    
-          <a href="your-link-here.html" class="card-link">
-              <div class="card">
-                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="New York" class="card-img">
-                  <div class="card__content">
-                      <h2 class="card__title"><Strong>Bastille</Strong></h2>
-                      <p class="card__description">New York</p>
-                  </div>
-                  <input id="toggle-heart3" type="checkbox"/>
-                <label for="toggle-heart3">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="300" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-                </label>
-              </div>     
-          </a>
-          <a href="your-link-here.html" class="card-link">
-              <div class="card">
-                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="New York" class="card-img">
-                  <div class="card__content">
-                      <h2 class="card__title"><Strong>Le Gourmand</Strong></h2>
-                      <p class="card__description">New York</p>
-                  </div>
-                  <input id="toggle-heart4" type="checkbox"/>
-                <label for="toggle-heart4">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="300" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-                </label>
-              </div>  
-            </a>       
+            </div>
         </section>
         
     </main>
