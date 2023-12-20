@@ -8,7 +8,7 @@
       color: #fff;
       cursor: pointer;
       margin: 20px;
-      height: 55px;
+      height: 45px;
       text-align:center;
       border: none;
       background-size: 300% 100%;
@@ -36,6 +36,18 @@
   }
 
 
+  .hiw li:hover a {
+    /* Style for the text on hover */
+    color: black; /* Or any color for the text */
+    background-color: #f0e9f8; /* Change the background color */
+}
+
+.hiw li:hover a i {
+    /* Style for the icon on hover */
+    color: $primary-color; /* Change the color of the icon */
+}
+
+
 .numbered__buttons {
   list-style: none;
   padding: 0 0 0 10px;
@@ -45,6 +57,13 @@
 .numbered__buttons li {
   margin-top: 10px;
   position: relative;
+  // &.numbered__buttons:hover{
+  //   background-color: #f0e9f8;
+  //   box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);
+  //   &.numbered__buttons i:hover{
+  //     color: #9356DC;
+  //   }
+  // }
 }
 
 .numbered__buttons li::before {
@@ -79,13 +98,13 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0 10px 0 0;
   text-align: left;
-  &.bn17:hover{
-    background-color: #f0e9f8;
-    box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);
-    &.bn17 i:hover{
-      color: #9356DC;
-    }
-  }
+  // &.bn17:hover{
+  //   background-color: #f0e9f8;
+  //   box-shadow: 2px 4px 2px 0 rgba(229, 229, 231, 0.75);
+  //   &.bn17 i:hover{
+  //     color: #9356DC;
+  //   }
+  // }
 }
 
 .bn17 i {
@@ -186,6 +205,9 @@ label svg {
   position: relative;
 }
 
+
+
+
 // .menu__list--btn li::before {
 //   content: attr(data-number);
 //   display: inline-block;
@@ -211,7 +233,8 @@ label svg {
   display: flex; /* Use flexbox to center vertically */
   flex-direction: column; /* Place each word on a separate line */
   align-items: flex-start; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
+  justify-content: flex-start; /* Center content vertically */
+  overflow: hidden;
   padding: 20px 0px 5px 10px;
   height: 40px;
   border-radius: 20px;
@@ -219,6 +242,10 @@ label svg {
   text-align: left;
   background-color: white;
   
+}
+
+.price{
+  font-size: 14px;
 }
 
 }

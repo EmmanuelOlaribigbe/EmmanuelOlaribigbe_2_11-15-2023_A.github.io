@@ -47,16 +47,16 @@
     flex-direction: row;
     font-size: 10px;
    }
-   .menu__text p {
-    margin: 0;
-    
-   }
 
    .menu__p{
-    margin-top: 5px;
-    font-size: 10px;
-    font-weight: 500;
-    padding-right: 60px;
+    margin: 0;
+    font-size: 11px;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%; /* Adjust this as needed */
    }
 
    .menu__pic img{
@@ -70,7 +70,7 @@
     background-color: rgb(240, 236, 236);
     border-radius: 30px 30px 0px 0px;
     width: 100%;
-    height: 800px;
+    height: 1000px;
     
    }
 
@@ -127,8 +127,9 @@
    @include flex-centred;
    text-align: center;
     font-size: 16px;
-    padding: 0 50px 0 50px;
+    padding: 0 30px 0 30px;
     font-weight: 300;
+    
    }
 
   

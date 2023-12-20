@@ -84,6 +84,31 @@
   align-items: center;
 }
 
+.price{
+  position: absolute;
+  right: 40px;
+  top: 36px;
+  width: 0; /* Initially no width */
+  height: 56.1px;
+  border-radius: 0 20px 20px 0;
+  padding-right: 10px;
+  background-color: white;
+  transition: width 0.5s ease-in-out; /* Smooth transition for width */
+  display: flex;
+  // justify-content: space-between; /* Center child elements */
+  // // align-items: flex-end;
+}
+
+.price span{
+  width: 0px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  background-color: transparent;
+  border-radius: 50%; /* Makes it circular */
+  transform: scale(0); /* Start scaled down */
+  transition: transform margin-right 0.5s ease-in-out; /* Smooth transition for rotation and scaling */
+  
+}
+
 /* White circle and checkmark styles */
 .checkmark {
   width: 30px; /* Adjust size as needed */
@@ -112,3 +137,21 @@
 .menu .entrees_list .menu__list--btn li:hover .checkmark {
   transform: rotate(360deg) scale(1); /* Rotate and scale up the checkmark */
 }
+
+.menu .entrees_list .menu__list--btn li:hover .price{
+  width: 20%;
+  
+}
+
+.menu .entrees_list .menu__list--btn li:hover .price span{
+  width: 30%;
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+

@@ -42,11 +42,9 @@
 .card__description {
     font-size: 14px;
     margin: 10px 0;
+    font-weight: 300;
 }
 
-.card__description p {
-    font-weight: 10px;
-}
 
 .card-link, /* If you have a specific class for the links */
 .card a /* If you're targeting anchor tags within the card */ {
